@@ -27,4 +27,5 @@ while i < len(codepoints)*8:
     result=first|second
     base64+=base64_table[result]
     i+=6
+base64+=((4-(len(base64)%4)))%4*"="
 print(base64)
